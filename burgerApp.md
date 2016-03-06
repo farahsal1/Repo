@@ -1,0 +1,65 @@
+---
+title       : Fancy Burger Place Bill Calculation App
+subtitle    : A Basic App for calculating bills
+author      : FarahSal
+job         : Student
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [quiz]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2pdf
+---
+
+## Fancy Burger App
+
+This app is a way to calculate the bills for a burger place.
+
+--- .class #id 
+
+## Simple Assumptions
+
+To keep the app simple, I have assumed only two products: burger and fries.
+
+
+--- 
+## Menu Prices
+
+Burgers are priced at $4.50 each and box of fries at $2.00 each. Then there is option of extra sauce at 50 cents and tipping.
+Although a very simple idea, this app can be modified to create a detailed billing form. We can add more menu items and offer more flexible number of units of fries (kinda unrealistic here.)
+
+
+
+---
+## Function behind the calculation
+
+This is the function:
+
+
+```r
+s<-function(Burgers, Fries, Tips, ExtraSauce) {
+   if (ExtraSauce == TRUE) {
+  y<-Burgers*4.5+as.numeric(Fries)*2.00 + Tips + 0.5
+   } else {
+  y<-Burgers*4.5+as.numeric(Fries)*2.00+Tips
+   }
+  print(y) 
+}
+}
+```
+
+---&radio
+## Question
+
+How many products are on the menu?
+
+1. 1
+2. _2_
+3. 3
+4. 4
+
+***.hint
+This is a hint
+
+***.explanation
+Refer to previous slides
